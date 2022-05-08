@@ -12,7 +12,6 @@ import sys
 import signal
 import requests
 import urllib
-import colorama
 
 def handler(sig, frame):
     print("\n\nQuitting.. ")
@@ -89,6 +88,7 @@ def main():
 if __name__ == '__main__':
     signal.signal(signal.SIGINT, handler)
     try:
+        init()
         definitions()
         args = arg_parse()
         if not args.nobanner:
